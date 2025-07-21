@@ -1,5 +1,7 @@
 # sudo
+
 ### This is an intresting plugin from [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo),<BR>⚠️ please note that all credits are of oh-my-zsh team
+
 ---
 
 ##### This seeams doesn't work in combination with [zap-zsh/vim](https://github.com/zap-zsh/vim), althogh it works with standard ZSH VI mode (`bindkey -v`)
@@ -13,7 +15,7 @@ To use it, add `"zap-zsh/sudo"` to the plugins in your zshrc file:
 ```zsh
 plug "zap-zsh/sudo"
 ```
-  
+
 ### Current typed commands
 
 Say you have typed a long command and forgot to add `sudo` in front:
@@ -70,9 +72,9 @@ By default, the `sudo` plugin uses <kbd>Esc</kbd><kbd>Esc</kbd> as the trigger.
 If you want to change it, you can use the `bindkey` command to bind it to a different key:
 
 ```sh
-bindkey -M emacs '<seq>' sudo-command-line
-bindkey -M vicmd '<seq>' sudo-command-line
-bindkey -M viins '<seq>' sudo-command-line
+SUDO_COMMAND_LINE_BIND='<seq>'
+
+# SUDO_COMMAND_LINE_BIND='\e\e' # default bind
 ```
 
 where `<seq>` is the sequence you want to use. You can find the keyboard sequence
